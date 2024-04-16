@@ -3,7 +3,12 @@ const baseUrl = 'http://localhost:3001/notes'
 
 const getAll = () => {
   const request = axios.get(baseUrl)
-  return request.then(response => response.data)
+  const con={
+    content: "hollllllllllllla",
+    important:true,
+    id:100
+  }
+  return request.then(response => response.data.concat(con))
 }
 
 const create = newObject => {
