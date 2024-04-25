@@ -1,14 +1,9 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3001/notes'
+const baseUrl = 'https://notasdeploy.onrender.com/api/notes'
 
 const getAll = () => {
   const request = axios.get(baseUrl)
-  const con={
-    content: "hollllllllllllla",
-    important:true,
-    id:100
-  }
-  return request.then(response => response.data.concat(con))
+  return request.then(response => response.data)
 }
 
 const create = newObject => {
